@@ -1,0 +1,5 @@
+#Carpetas Que no se subiran
+/__pycache__
+/.vscode
+/foro_tutoriales
+/images
