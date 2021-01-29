@@ -2,7 +2,8 @@
 def Suma(n1, n2):
     res = n1 + n2
     print(res)
-    return n1, n2
+    return 
+
 
 #Resta
 def Resta():
