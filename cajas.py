@@ -10,8 +10,8 @@ def crear_cajas():# Esto es un arreglo
     # Caja donde se guardan los puntos con mas valor de forma larga
     downbox = np.zeros((4,4))
 
-    # Caja donde se guardan los puntos, rayas y conchas
-    upbox = np.array([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+    # Caja donde se guardan los puntos , rayas y conchas
+    upbox = np.array([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], ["", "=", "=", "="]])
 
     print("=============== Ejemplos =================")
     print(v)
