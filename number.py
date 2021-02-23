@@ -1,6 +1,4 @@
 
-
-
 #Se definen los nivel elevados al 20
 #El primer nivel inicia en la posición [0]
 nivel = []
@@ -8,9 +6,9 @@ for i in range(6):
     nivel.append(pow(20,i))    
 print(nivel)
 
-resultados = []
+numeros = []
 for i in range(6):
-    resultados.append(0)
+    numeros.append(0)
 
 #Se dice la cantidad del numero
 n = int(170)
@@ -24,7 +22,7 @@ if( n > 159999):
 #Definir en que nivel caen  y descomponer numeros
 if(n < 20):
     print("Nivel x 1")
-    resultados[0] = n
+    numeros[0] = n
     print(n)
 
 #Nivel del 20
@@ -33,9 +31,9 @@ elif(n < nivel[2] and n > nivel[1]):
     valor = int ((n / nivel[1]))
     res = int (n - (valor*nivel[1]))
     print(valor)
-    resultados[1] = valor
+    numeros[1] = valor
     print(res)
-    resultados[0] = res
+    numeros[0] = res
 
 #Nivel del 400
 elif(n < nivel[3] and n > nivel[2]):
@@ -44,16 +42,16 @@ elif(n < nivel[3] and n > nivel[2]):
     res = int (n - (valor*nivel[2]))
     n = res
     print(valor)
-    resultados[2] = valor
+    numeros[2] = valor
 
     if(n < nivel[2] and n > nivel[1]):
         valor = int ((n / nivel[1]))
         res = int (n - (valor*nivel[1]))
 
     print(valor)
-    resultados[1] = valor
+    numeros[1] = valor
     print(res)
-    resultados[0] = res
+    numeros[0] = res
 
 #Nivel de 8000
 elif(n < nivel[4] and n > nivel[3]):
@@ -62,21 +60,21 @@ elif(n < nivel[4] and n > nivel[3]):
     res = int (n - (valor*nivel[3]))
     n = res
     print(valor)
-    resultados[3] = valor
+    numeros[3] = valor
     if(n < nivel[3] and n > nivel[2]):
         valor = int ((n / nivel[2]))
         res = int (n - (valor*nivel[2]))
         n = res
         print(valor)
-        resultados[2] = valor
+        numeros[2] = valor
 
         if(n < nivel[2] and n > nivel[1]):
             valor = int ((n / nivel[1]))
             res = int (n - (valor*nivel[1]))
         print(valor)
-        resultados[1] = valor
+        numeros[1] = valor
         print(res)
-        resultados[0] = res
+        numeros[0] = res
 
 #Nivel de 160000 al dividir en decimal redondea por lo tanto no funciona como deberia
 elif(n < nivel[5] and n > nivel[4]):
@@ -101,5 +99,4 @@ elif(n < nivel[5] and n > nivel[4]):
                 print(valor)
                 print(res)
                 
-
-print(resultados)
+print(numeros)

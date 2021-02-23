@@ -2,8 +2,10 @@ n1 = 2
 n2 = 3
 
 def Suma():
-    print(n1 + n2)
-    return n1 + n2
+    for i in range(len(resultados)):
+        resultados[i][1] = resultados[i][1] + resultados_1[i][1]
+        resultados[i][0] = resultados[i][0] + resultados_1[i][0]
+        return resultados
 
 def Resta():
      return n1 - n2

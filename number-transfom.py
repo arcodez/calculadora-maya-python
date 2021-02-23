@@ -1,3 +1,5 @@
+from convertir import resultados
+from number import numeros
 
 niveles = []
 
@@ -5,7 +7,9 @@ cero = 0
 punto = 1
 raya = 5
 
-add = 2500
+#Aun el numero no puedo ser mayor a 19
+add = 17
+
 #Definir numeros
 def Cero():
     cero = []
@@ -39,29 +43,38 @@ if( add == 0 ):
 
 #Se escribe en puntos si el numero es menor a 5
 elif( add < 5):
-  Punto(add)
+    resultados[0][1] = add
+    Punto(add)
 
 #Aqui se hace la raya que es igual a 5
 elif( add == 5 ):
+    resultados[0][0] = 1
     Raya(1)
 
 elif( add == 10 ):
-    print("Este es el numero 10")
+    resultados[0][0] = 2
     Raya(2)
 
 elif( add < 10 and add > 5):
     add = add - 5
+    resultados[0][1] = add
+    resultados[0][0] = 1
     Punto(add)
     Raya(1)
 
 elif( add > 10 and add < 15):
     add = add - 10
+    resultados[0][1] = add
+    resultados[0][0] = 2
     Punto(add)
     Raya(2)
 
 elif( add > 15 and add < 19):
     add = add - 15
+    resultados[0][1] = add
+    resultados[0][0] = 3
     Punto(add)
     Raya(3)
 
 
+print(resultados)
